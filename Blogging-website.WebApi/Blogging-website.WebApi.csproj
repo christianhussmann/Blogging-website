@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Blogging_website</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Dtos" />
+    </ItemGroup>
+
+</Project>
