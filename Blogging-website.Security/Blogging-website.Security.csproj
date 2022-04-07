@@ -6,12 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Entities" />
-      <Folder Include="IRepositories" />
-      <Folder Include="IServices" />
-      <Folder Include="Models" />
-      <Folder Include="Repositories" />
-      <Folder Include="Services" />
+      <ProjectReference Include="..\Blogging-website.Core\Blogging-website.Core.csproj" />
+      <ProjectReference Include="..\Blogging-website.DB\Blogging-website.DB.csproj" />
+      <ProjectReference Include="..\Blogging-website.Domain\Blogging-website.Domain.csproj" />
     </ItemGroup>
 
 </Project>

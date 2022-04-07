@@ -1,11 +1,90 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Blogging-website.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Blogging-website.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blogging-website.Core.dll": {}
+        }
+      },
+      "Blogging-website.DB/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Blogging-website.Core": "1.0.0",
+          "Blogging-website.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blogging-website.DB.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blogging-website.DB.dll": {}
+        }
+      },
+      "Blogging-website.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Blogging-website.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blogging-website.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blogging-website.Domain.dll": {}
+        }
+      },
+      "Blogging-website.Security/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Blogging-website.Core": "1.0.0",
+          "Blogging-website.DB": "1.0.0",
+          "Blogging-website.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blogging-website.Security.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blogging-website.Security.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Blogging-website.Core/1.0.0": {
+      "type": "project",
+      "path": "../Blogging-website.Core/Blogging-website.Core.csproj",
+      "msbuildProject": "../Blogging-website.Core/Blogging-website.Core.csproj"
+    },
+    "Blogging-website.DB/1.0.0": {
+      "type": "project",
+      "path": "../Blogging-website.DB/Blogging-website.DB.csproj",
+      "msbuildProject": "../Blogging-website.DB/Blogging-website.DB.csproj"
+    },
+    "Blogging-website.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Blogging-website.Domain/Blogging-website.Domain.csproj",
+      "msbuildProject": "../Blogging-website.Domain/Blogging-website.Domain.csproj"
+    },
+    "Blogging-website.Security/1.0.0": {
+      "type": "project",
+      "path": "../Blogging-website.Security/Blogging-website.Security.csproj",
+      "msbuildProject": "../Blogging-website.Security/Blogging-website.Security.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Blogging-website.Core >= 1.0.0",
+      "Blogging-website.DB >= 1.0.0",
+      "Blogging-website.Domain >= 1.0.0",
+      "Blogging-website.Security >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\bruger\\.nuget\\packages\\": {},
@@ -40,7 +119,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Core\\Blogging-website.Core.csproj": {
+              "projectPath": "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Core\\Blogging-website.Core.csproj"
+            },
+            "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.DB\\Blogging-website.DB.csproj": {
+              "projectPath": "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.DB\\Blogging-website.DB.csproj"
+            },
+            "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Domain\\Blogging-website.Domain.csproj": {
+              "projectPath": "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Domain\\Blogging-website.Domain.csproj"
+            },
+            "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Security\\Blogging-website.Security.csproj": {
+              "projectPath": "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Security\\Blogging-website.Security.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

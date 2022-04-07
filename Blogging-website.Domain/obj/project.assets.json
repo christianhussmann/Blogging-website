@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Blogging-website.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Blogging-website.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blogging-website.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Blogging-website.Core/1.0.0": {
+      "type": "project",
+      "path": "../Blogging-website.Core/Blogging-website.Core.csproj",
+      "msbuildProject": "../Blogging-website.Core/Blogging-website.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Blogging-website.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\bruger\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Core\\Blogging-website.Core.csproj": {
+              "projectPath": "C:\\Users\\bruger\\CSharpBasics2021\\Blogging-website\\Blogging-website.Core\\Blogging-website.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

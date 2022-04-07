@@ -6,7 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Dtos" />
+      <ProjectReference Include="..\Blogging-website.Core\Blogging-website.Core.csproj" />
+      <ProjectReference Include="..\Blogging-website.DB\Blogging-website.DB.csproj" />
+      <ProjectReference Include="..\Blogging-website.Domain\Blogging-website.Domain.csproj" />
+      <ProjectReference Include="..\Blogging-website.Security\Blogging-website.Security.csproj" />
     </ItemGroup>
 
 </Project>

@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Entities" />
-      <Folder Include="Repositories" />
+      <ProjectReference Include="..\Blogging-website.Core\Blogging-website.Core.csproj" />
+      <ProjectReference Include="..\Blogging-website.Domain\Blogging-website.Domain.csproj" />
     </ItemGroup>
 
 </Project>
