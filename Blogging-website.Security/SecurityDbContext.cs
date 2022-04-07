@@ -1,4 +1,5 @@
 ﻿using Blogging_website.Security.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blogging_website.Security
 {
@@ -6,6 +7,6 @@ namespace Blogging_website.Security
     {
         public SecurityDbContext(DbContextOptions<SecurityDbContext> options) : base(options) { }
         
-        public DbSet<AccountLoginEntity> AccountLogin { get; set; }
+        public DbSet<AccountLoginEntity> AccountLogins { get; set; }
     }
 }

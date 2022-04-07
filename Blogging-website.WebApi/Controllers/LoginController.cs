@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using Bloggin_website.Core.IServices;
+using Bloggin_website.Core.Models;
 using Blogging_website.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +27,7 @@ namespace Blogging_website.Controllers
         {
             if (id != dto.Id)
             {
-                return BadRequest("It is not a match bro");
+                return BadRequest("It is not a match");
             }
 
             var login = _loginService.UpdateLogin(new Login
@@ -47,7 +50,7 @@ namespace Blogging_website.Controllers
             try
             {
                 var newLogin = _loginService.CreateLogin(loginFromDto);
-                return Created($"https://localhost:5001/api/logins/{newLogin.Id}")
+                return Created($"https://localhost:5001/api/logins/{newLogin.Id}", newLogin);
             }
             catch (ArgumentException ae)
             {
